@@ -5,11 +5,9 @@ import {
   ArrowUpRight,
   Phone,
   MessageCircle,
-  Mail,
   Plus,
   Minus,
   Check,
-  Search,
   Sparkles,
 } from "lucide-react";
 
@@ -19,9 +17,6 @@ import clinic from "@/assets/proj-clinic.jpg";
 import restaurant from "@/assets/proj-restaurant.jpg";
 import academy from "@/assets/proj-academy.jpg";
 import plumbing from "@/assets/proj-plumbing.jpg";
-import avatar1 from "@/assets/avatar-1.jpg";
-import avatar2 from "@/assets/avatar-2.jpg";
-import avatar3 from "@/assets/avatar-3.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -37,12 +32,12 @@ const fadeUp: Variants = {
 };
 
 const projects = [
-  { img: gym, tag: "Fitness Center", title: "FitZone Gym", desc: "Local gym needed a simple site to show classes and rates.", result: "+30 inquiries / month", year: "2025" },
-  { img: salon, tag: "Beauty Salon", title: "Priya's Hair Studio", desc: "Showcase her work and take online bookings.", result: "50+ online bookings", year: "2025" },
-  { img: clinic, tag: "Medical", title: "Dr. Kumar's Clinic", desc: "Professional site to share qualifications and contact.", result: "+25 new patients", year: "2025" },
-  { img: restaurant, tag: "Restaurant", title: "Chennai Biriyani House", desc: "Menu online and one-tap call ordering.", result: "+40% phone orders", year: "2024" },
-  { img: academy, tag: "Education", title: "Learn English Academy", desc: "Attract students and parents in the area.", result: "+15 new students", year: "2024" },
-  { img: plumbing, tag: "Services", title: "ProFix Plumbing", desc: "Get found on Google for emergency calls.", result: "+20 emergency calls", year: "2024" },
+  { img: gym, tag: "Fitness Center", title: "Gym & Fitness Studios", desc: "Class schedules, trainer profiles, and one-tap sign-ups that turn visitors into members." },
+  { img: salon, tag: "Beauty Salon", title: "Salons & Spas", desc: "Showcase your work with a gallery and let customers book appointments online — even after hours." },
+  { img: clinic, tag: "Medical", title: "Clinics & Doctors", desc: "A trustworthy presence with qualifications, services, timings, and easy contact for new patients." },
+  { img: restaurant, tag: "Restaurant", title: "Restaurants & Cafés", desc: "Digital menu, photo gallery, and tap-to-call ordering built for hungry mobile visitors." },
+  { img: academy, tag: "Education", title: "Coaching & Academies", desc: "Courses, batches, and enquiry forms designed to convert curious parents into enrolled students." },
+  { img: plumbing, tag: "Local Services", title: "Home & Local Services", desc: "Get found on Google for the work you do nearby — plumbing, electrical, repairs, and more." },
 ];
 
 const services = [
@@ -52,12 +47,6 @@ const services = [
   { title: "E-commerce stores", desc: "Product catalog, cart, and online payments — ready to start selling." },
   { title: "Speed & performance", desc: "Lighthouse-tuned. Most sites I ship score 95+ on mobile." },
   { title: "WhatsApp support", desc: "One year of WhatsApp and call support included with every project." },
-];
-
-const testimonials = [
-  { quote: "He explained everything in plain Tamil. No jargon, no surprises. My salon gets bookings every week now.", name: "Priya R.", role: "Salon Owner, Chennai", img: avatar2 },
-  { quote: "Our biryani orders by phone jumped almost 40% in two months. Best money our restaurant ever spent.", name: "Karthik V.", role: "Restaurant Owner, Coimbatore", img: avatar3 },
-  { quote: "Fair price, fast delivery, and he picks up the phone whenever I call. That's rare.", name: "Arun S.", role: "Gym Owner, Madurai", img: avatar1 },
 ];
 
 const faqs = [
@@ -77,7 +66,7 @@ function Home() {
       <Marquee />
       <Services />
       <Works />
-      <Testimonials />
+      
       <Pricing />
       <FAQ />
       <CTA />
@@ -118,14 +107,10 @@ function Hero() {
           initial="hidden"
           animate="show"
           variants={fadeUp}
-          className="mx-auto inline-flex items-center gap-3 rounded-full border border-border/70 bg-card/60 px-4 py-2 text-sm text-muted-foreground"
+          className="mx-auto inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/60 px-4 py-2 text-sm text-muted-foreground"
         >
-          <div className="flex -space-x-2">
-            <img src={avatar1} alt="" className="size-6 rounded-full ring-2 ring-background" />
-            <img src={avatar2} alt="" className="size-6 rounded-full ring-2 ring-background" />
-            <img src={avatar3} alt="" className="size-6 rounded-full ring-2 ring-background" />
-          </div>
-          Trusted by 50+ local businesses
+          <span className="size-1.5 rounded-full bg-primary" />
+          Now taking new projects across Tamil Nadu
         </motion.div>
 
         <motion.h1
@@ -246,7 +231,7 @@ function Works() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex items-end justify-between gap-8">
           <div>
-            <SectionLabel>Selected projects</SectionLabel>
+            <SectionLabel>What we build</SectionLabel>
             <motion.h2
               initial="hidden"
               whileInView="show"
@@ -254,8 +239,8 @@ function Works() {
               variants={fadeUp}
               className="mt-4 max-w-2xl text-4xl leading-tight md:text-6xl"
             >
-              Real businesses,{" "}
-              <span className="italic text-primary">real results</span>.
+              Websites built for{" "}
+              <span className="italic text-primary">every kind of business</span>.
             </motion.h2>
           </div>
         </div>
@@ -290,10 +275,7 @@ function Works() {
                   <h3 className="font-serif text-2xl">{p.title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
                 </div>
-                <div className="shrink-0 text-right">
-                  <div className="text-xs text-muted-foreground">{p.year}</div>
-                  <div className="mt-1 text-sm font-medium text-primary">{p.result}</div>
-                </div>
+                <ArrowUpRight className="mt-1 size-5 shrink-0 text-muted-foreground transition group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </div>
             </motion.a>
           ))}
@@ -303,50 +285,6 @@ function Works() {
   );
 }
 
-/* ---------------- TESTIMONIALS ---------------- */
-function Testimonials() {
-  const row = [...testimonials, ...testimonials, ...testimonials];
-  return (
-    <section className="border-t border-border/60 py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionLabel>Testimonials</SectionLabel>
-        <motion.h2
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.4 }}
-          variants={fadeUp}
-          className="mt-4 max-w-3xl text-4xl leading-tight md:text-6xl"
-        >
-          What clients have to <span className="italic text-primary">say</span>.
-        </motion.h2>
-      </div>
-
-      <div className="relative mt-14 overflow-hidden">
-        <div className="marquee-track-slow flex shrink-0 gap-5 pr-5">
-          {row.map((t, i) => (
-            <figure
-              key={i}
-              className="flex w-[340px] shrink-0 flex-col justify-between rounded-2xl border border-border bg-card p-7 md:w-[420px]"
-            >
-              <blockquote className="text-pretty text-lg leading-snug">
-                “{t.quote}”
-              </blockquote>
-              <figcaption className="mt-8 flex items-center gap-3">
-                <img src={t.img} alt="" className="size-10 rounded-full object-cover" />
-                <div>
-                  <div className="text-sm font-medium">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
-                </div>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent" />
-      </div>
-    </section>
-  );
-}
 
 /* ---------------- PRICING ---------------- */
 function Pricing() {
@@ -518,15 +456,18 @@ function CTA() {
           advice about what your business actually needs.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <a href="tel:+91" className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 text-sm text-primary transition hover:opacity-90">
-            <Phone className="size-4" /> Call me now
+          <a href="tel:+919344241344" className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 text-sm text-primary transition hover:opacity-90">
+            <Phone className="size-4" /> +91 93442 41344
           </a>
-          <a href="https://wa.me/" className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-6 py-3 text-sm transition hover:bg-primary-foreground/10">
-            <MessageCircle className="size-4" /> WhatsApp
+          <a href="tel:+919791592107" className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 text-sm text-primary transition hover:opacity-90">
+            <Phone className="size-4" /> +91 97915 92107
+          </a>
+          <a href="https://wa.me/919344241344" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-6 py-3 text-sm transition hover:bg-primary-foreground/10">
+            <MessageCircle className="size-4" /> WhatsApp 93442 41344
           </a>
         </div>
         <p className="mt-8 text-sm text-primary-foreground/70">
-          ☎️ +91 XXXXX XXXXX &nbsp;·&nbsp; ✉️ hello@webdev.tn
+          Call or WhatsApp any time — we usually reply within an hour.
         </p>
       </div>
     </section>
@@ -547,9 +488,9 @@ function Footer() {
           </p>
         </div>
         <div className="flex flex-wrap gap-5 text-sm text-muted-foreground">
-          <a href="tel:+91" className="inline-flex items-center gap-1.5 hover:text-foreground"><Phone className="size-4" /> Call</a>
-          <a href="https://wa.me/" className="inline-flex items-center gap-1.5 hover:text-foreground"><MessageCircle className="size-4" /> WhatsApp</a>
-          <a href="mailto:hello@webdev.tn" className="inline-flex items-center gap-1.5 hover:text-foreground"><Mail className="size-4" /> Email</a>
+          <a href="tel:+919344241344" className="inline-flex items-center gap-1.5 hover:text-foreground"><Phone className="size-4" /> +91 93442 41344</a>
+          <a href="tel:+919791592107" className="inline-flex items-center gap-1.5 hover:text-foreground"><Phone className="size-4" /> +91 97915 92107</a>
+          <a href="https://wa.me/919344241344" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-foreground"><MessageCircle className="size-4" /> WhatsApp</a>
         </div>
       </div>
       <div className="mx-auto mt-10 max-w-6xl px-6 text-xs text-muted-foreground">
@@ -569,5 +510,3 @@ function SectionLabel({ children, light = false }: { children: React.ReactNode; 
   );
 }
 
-// Silence unused import warning when icons are tree-shaken in dev
-void Search;
