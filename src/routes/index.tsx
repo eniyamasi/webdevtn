@@ -284,10 +284,7 @@ function Works() {
                   <h3 className="font-serif text-2xl">{p.title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
                 </div>
-                <div className="shrink-0 text-right">
-                  <div className="text-xs text-muted-foreground">{p.year}</div>
-                  <div className="mt-1 text-sm font-medium text-primary">{p.result}</div>
-                </div>
+                <ArrowUpRight className="mt-1 size-5 shrink-0 text-muted-foreground transition group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </div>
             </motion.a>
           ))}
