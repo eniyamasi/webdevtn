@@ -294,50 +294,6 @@ function Works() {
   );
 }
 
-/* ---------------- TESTIMONIALS ---------------- */
-function Testimonials() {
-  const row = [...testimonials, ...testimonials, ...testimonials];
-  return (
-    <section className="border-t border-border/60 py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionLabel>Testimonials</SectionLabel>
-        <motion.h2
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.4 }}
-          variants={fadeUp}
-          className="mt-4 max-w-3xl text-4xl leading-tight md:text-6xl"
-        >
-          What clients have to <span className="italic text-primary">say</span>.
-        </motion.h2>
-      </div>
-
-      <div className="relative mt-14 overflow-hidden">
-        <div className="marquee-track-slow flex shrink-0 gap-5 pr-5">
-          {row.map((t, i) => (
-            <figure
-              key={i}
-              className="flex w-[340px] shrink-0 flex-col justify-between rounded-2xl border border-border bg-card p-7 md:w-[420px]"
-            >
-              <blockquote className="text-pretty text-lg leading-snug">
-                “{t.quote}”
-              </blockquote>
-              <figcaption className="mt-8 flex items-center gap-3">
-                <img src={t.img} alt="" className="size-10 rounded-full object-cover" />
-                <div>
-                  <div className="text-sm font-medium">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
-                </div>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent" />
-      </div>
-    </section>
-  );
-}
 
 /* ---------------- PRICING ---------------- */
 function Pricing() {
