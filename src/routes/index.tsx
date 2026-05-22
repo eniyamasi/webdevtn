@@ -37,12 +37,12 @@ const fadeUp: Variants = {
 };
 
 const projects = [
-  { img: gym, tag: "Fitness Center", title: "FitZone Gym", desc: "Local gym needed a simple site to show classes and rates.", result: "+30 inquiries / month", year: "2025" },
-  { img: salon, tag: "Beauty Salon", title: "Priya's Hair Studio", desc: "Showcase her work and take online bookings.", result: "50+ online bookings", year: "2025" },
-  { img: clinic, tag: "Medical", title: "Dr. Kumar's Clinic", desc: "Professional site to share qualifications and contact.", result: "+25 new patients", year: "2025" },
-  { img: restaurant, tag: "Restaurant", title: "Chennai Biriyani House", desc: "Menu online and one-tap call ordering.", result: "+40% phone orders", year: "2024" },
-  { img: academy, tag: "Education", title: "Learn English Academy", desc: "Attract students and parents in the area.", result: "+15 new students", year: "2024" },
-  { img: plumbing, tag: "Services", title: "ProFix Plumbing", desc: "Get found on Google for emergency calls.", result: "+20 emergency calls", year: "2024" },
+  { img: gym, tag: "Fitness Center", title: "Gym & Fitness Studios", desc: "Class schedules, trainer profiles, and one-tap sign-ups that turn visitors into members." },
+  { img: salon, tag: "Beauty Salon", title: "Salons & Spas", desc: "Showcase your work with a gallery and let customers book appointments online — even after hours." },
+  { img: clinic, tag: "Medical", title: "Clinics & Doctors", desc: "A trustworthy presence with qualifications, services, timings, and easy contact for new patients." },
+  { img: restaurant, tag: "Restaurant", title: "Restaurants & Cafés", desc: "Digital menu, photo gallery, and tap-to-call ordering built for hungry mobile visitors." },
+  { img: academy, tag: "Education", title: "Coaching & Academies", desc: "Courses, batches, and enquiry forms designed to convert curious parents into enrolled students." },
+  { img: plumbing, tag: "Local Services", title: "Home & Local Services", desc: "Get found on Google for the work you do nearby — plumbing, electrical, repairs, and more." },
 ];
 
 const services = [
@@ -52,12 +52,6 @@ const services = [
   { title: "E-commerce stores", desc: "Product catalog, cart, and online payments — ready to start selling." },
   { title: "Speed & performance", desc: "Lighthouse-tuned. Most sites I ship score 95+ on mobile." },
   { title: "WhatsApp support", desc: "One year of WhatsApp and call support included with every project." },
-];
-
-const testimonials = [
-  { quote: "He explained everything in plain Tamil. No jargon, no surprises. My salon gets bookings every week now.", name: "Priya R.", role: "Salon Owner, Chennai", img: avatar2 },
-  { quote: "Our biryani orders by phone jumped almost 40% in two months. Best money our restaurant ever spent.", name: "Karthik V.", role: "Restaurant Owner, Coimbatore", img: avatar3 },
-  { quote: "Fair price, fast delivery, and he picks up the phone whenever I call. That's rare.", name: "Arun S.", role: "Gym Owner, Madurai", img: avatar1 },
 ];
 
 const faqs = [
