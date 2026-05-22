@@ -5,11 +5,9 @@ import {
   ArrowUpRight,
   Phone,
   MessageCircle,
-  Mail,
   Plus,
   Minus,
   Check,
-  Search,
   Sparkles,
 } from "lucide-react";
 
@@ -19,9 +17,6 @@ import clinic from "@/assets/proj-clinic.jpg";
 import restaurant from "@/assets/proj-restaurant.jpg";
 import academy from "@/assets/proj-academy.jpg";
 import plumbing from "@/assets/proj-plumbing.jpg";
-import avatar1 from "@/assets/avatar-1.jpg";
-import avatar2 from "@/assets/avatar-2.jpg";
-import avatar3 from "@/assets/avatar-3.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
