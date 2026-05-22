@@ -240,12 +240,16 @@ function Works() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex items-end justify-between gap-8">
           <div>
-            <SectionLabel>Selected projects</SectionLabel>
+            <SectionLabel>What we build</SectionLabel>
             <motion.h2
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.4 }}
               variants={fadeUp}
+              className="mt-4 max-w-2xl text-4xl leading-tight md:text-6xl"
+            >
+              Websites built for{" "}
+              <span className="italic text-primary">every kind of business</span>.
               className="mt-4 max-w-2xl text-4xl leading-tight md:text-6xl"
             >
               Real businesses,{" "}
