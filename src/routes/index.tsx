@@ -461,15 +461,18 @@ function CTA() {
           advice about what your business actually needs.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <a href="tel:+91" className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 text-sm text-primary transition hover:opacity-90">
-            <Phone className="size-4" /> Call me now
+          <a href="tel:+919344241344" className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 text-sm text-primary transition hover:opacity-90">
+            <Phone className="size-4" /> +91 93442 41344
           </a>
-          <a href="https://wa.me/" className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-6 py-3 text-sm transition hover:bg-primary-foreground/10">
-            <MessageCircle className="size-4" /> WhatsApp
+          <a href="tel:+919791592107" className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 text-sm text-primary transition hover:opacity-90">
+            <Phone className="size-4" /> +91 97915 92107
+          </a>
+          <a href="https://wa.me/919344241344" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-6 py-3 text-sm transition hover:bg-primary-foreground/10">
+            <MessageCircle className="size-4" /> WhatsApp 93442 41344
           </a>
         </div>
         <p className="mt-8 text-sm text-primary-foreground/70">
-          ☎️ +91 XXXXX XXXXX &nbsp;·&nbsp; ✉️ hello@webdev.tn
+          Call or WhatsApp any time — we usually reply within an hour.
         </p>
       </div>
     </section>
