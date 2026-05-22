@@ -510,5 +510,3 @@ function SectionLabel({ children, light = false }: { children: React.ReactNode; 
   );
 }
 
-// Silence unused import warning when icons are tree-shaken in dev
-void Search;
