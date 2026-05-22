@@ -250,10 +250,6 @@ function Works() {
             >
               Websites built for{" "}
               <span className="italic text-primary">every kind of business</span>.
-              className="mt-4 max-w-2xl text-4xl leading-tight md:text-6xl"
-            >
-              Real businesses,{" "}
-              <span className="italic text-primary">real results</span>.
             </motion.h2>
           </div>
         </div>
