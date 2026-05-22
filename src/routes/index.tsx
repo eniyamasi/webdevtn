@@ -112,14 +112,10 @@ function Hero() {
           initial="hidden"
           animate="show"
           variants={fadeUp}
-          className="mx-auto inline-flex items-center gap-3 rounded-full border border-border/70 bg-card/60 px-4 py-2 text-sm text-muted-foreground"
+          className="mx-auto inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/60 px-4 py-2 text-sm text-muted-foreground"
         >
-          <div className="flex -space-x-2">
-            <img src={avatar1} alt="" className="size-6 rounded-full ring-2 ring-background" />
-            <img src={avatar2} alt="" className="size-6 rounded-full ring-2 ring-background" />
-            <img src={avatar3} alt="" className="size-6 rounded-full ring-2 ring-background" />
-          </div>
-          Trusted by 50+ local businesses
+          <span className="size-1.5 rounded-full bg-primary" />
+          Now taking new projects across Tamil Nadu
         </motion.div>
 
         <motion.h1
