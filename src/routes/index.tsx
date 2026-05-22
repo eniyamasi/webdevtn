@@ -71,7 +71,7 @@ function Home() {
       <Marquee />
       <Services />
       <Works />
-      <Testimonials />
+      
       <Pricing />
       <FAQ />
       <CTA />
