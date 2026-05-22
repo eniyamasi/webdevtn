@@ -493,9 +493,9 @@ function Footer() {
           </p>
         </div>
         <div className="flex flex-wrap gap-5 text-sm text-muted-foreground">
-          <a href="tel:+91" className="inline-flex items-center gap-1.5 hover:text-foreground"><Phone className="size-4" /> Call</a>
-          <a href="https://wa.me/" className="inline-flex items-center gap-1.5 hover:text-foreground"><MessageCircle className="size-4" /> WhatsApp</a>
-          <a href="mailto:hello@webdev.tn" className="inline-flex items-center gap-1.5 hover:text-foreground"><Mail className="size-4" /> Email</a>
+          <a href="tel:+919344241344" className="inline-flex items-center gap-1.5 hover:text-foreground"><Phone className="size-4" /> +91 93442 41344</a>
+          <a href="tel:+919791592107" className="inline-flex items-center gap-1.5 hover:text-foreground"><Phone className="size-4" /> +91 97915 92107</a>
+          <a href="https://wa.me/919344241344" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-foreground"><MessageCircle className="size-4" /> WhatsApp</a>
         </div>
       </div>
       <div className="mx-auto mt-10 max-w-6xl px-6 text-xs text-muted-foreground">
