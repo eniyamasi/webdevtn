@@ -7,8 +7,6 @@ import {
   MessageCircle,
   Plus,
   Minus,
-  Check,
-  Sparkles,
 } from "lucide-react";
 
 import gym from "@/assets/proj-gym.jpg";
