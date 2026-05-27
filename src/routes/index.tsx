@@ -66,8 +66,6 @@ function Home() {
       <Marquee />
       <Services />
       <Works />
-      
-      <Pricing />
       <FAQ />
       <CTA />
       <Footer />
@@ -86,7 +84,6 @@ function Nav() {
         <nav className="hidden gap-8 text-sm md:flex">
           <a href="#services" className="text-muted-foreground transition hover:text-foreground">Services</a>
           <a href="#works" className="text-muted-foreground transition hover:text-foreground">Works</a>
-          <a href="#pricing" className="text-muted-foreground transition hover:text-foreground">Pricing</a>
           <a href="#faq" className="text-muted-foreground transition hover:text-foreground">FAQ</a>
         </nav>
         <a href="#contact" className="group inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm text-primary-foreground transition hover:opacity-90">
