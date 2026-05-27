@@ -7,8 +7,6 @@ import {
   MessageCircle,
   Plus,
   Minus,
-  Check,
-  Sparkles,
 } from "lucide-react";
 
 import gym from "@/assets/proj-gym.jpg";
@@ -66,8 +64,6 @@ function Home() {
       <Marquee />
       <Services />
       <Works />
-      
-      <Pricing />
       <FAQ />
       <CTA />
       <Footer />
@@ -86,7 +82,6 @@ function Nav() {
         <nav className="hidden gap-8 text-sm md:flex">
           <a href="#services" className="text-muted-foreground transition hover:text-foreground">Services</a>
           <a href="#works" className="text-muted-foreground transition hover:text-foreground">Works</a>
-          <a href="#pricing" className="text-muted-foreground transition hover:text-foreground">Pricing</a>
           <a href="#faq" className="text-muted-foreground transition hover:text-foreground">FAQ</a>
         </nav>
         <a href="#contact" className="group inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm text-primary-foreground transition hover:opacity-90">
@@ -286,107 +281,8 @@ function Works() {
 }
 
 
-/* ---------------- PRICING ---------------- */
-function Pricing() {
-  const tiers = [
-    {
-      name: "Basic",
-      price: "₹25,000",
-      blurb: "Small local businesses",
-      features: ["3–5 pages", "Mobile-friendly", "Contact form", "Google Maps", "2 rounds of revisions"],
-      featured: false,
-    },
-    {
-      name: "Professional",
-      price: "₹45,000",
-      blurb: "Growing businesses",
-      features: ["5–7 pages", "Mobile optimized", "Contact + inquiry forms", "Image gallery", "Blog/news section", "4 rounds of revisions"],
-      featured: true,
-    },
-    {
-      name: "E-commerce",
-      price: "₹65,000",
-      blurb: "Online selling",
-      features: ["Full product catalog", "Shopping cart", "Online payments", "Order tracking", "5 rounds of revisions"],
-      featured: false,
-    },
-  ];
-  return (
-    <section id="pricing" className="border-t border-border/60 py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionLabel>Pricing</SectionLabel>
-        <motion.h2
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.4 }}
-          variants={fadeUp}
-          className="mt-4 max-w-3xl text-4xl leading-tight md:text-6xl"
-        >
-          Simple, <span className="italic text-primary">honest</span> pricing.
-        </motion.h2>
-        <p className="mt-4 max-w-xl text-muted-foreground">
-          One-time payment. No hidden costs. Pay only for what your business needs.
-        </p>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {tiers.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeUp}
-              custom={i}
-              className={`flex flex-col rounded-2xl border p-8 ${
-                t.featured
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "border-border bg-card"
-              }`}
-            >
-              <div className="flex items-center justify-between">
-                <h3 className="font-serif text-2xl">{t.name}</h3>
-                {t.featured && (
-                  <span className="inline-flex items-center gap-1 rounded-full bg-primary-foreground/15 px-3 py-1 text-xs">
-                    <Sparkles className="size-3" /> Most popular
-                  </span>
-                )}
-              </div>
-              <p className={`mt-1 text-sm ${t.featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
-                {t.blurb}
-              </p>
-              <div className="mt-8 font-serif text-5xl tracking-tight">{t.price}</div>
-              <p className={`mt-1 text-xs ${t.featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
-                One-time payment
-              </p>
-              <ul className="mt-8 space-y-3 text-sm">
-                {t.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2">
-                    <Check className={`mt-0.5 size-4 shrink-0 ${t.featured ? "text-primary-foreground" : "text-primary"}`} />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="#contact"
-                className={`mt-10 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm transition ${
-                  t.featured
-                    ? "bg-primary-foreground text-primary hover:opacity-90"
-                    : "border border-border bg-background hover:bg-accent"
-                }`}
-              >
-                Get started
-              </a>
-            </motion.div>
-          ))}
-        </div>
-        <p className="mt-10 text-center text-sm text-muted-foreground">
-          All plans include WhatsApp support for 1 year. Got questions?{" "}
-          <a href="#contact" className="underline">Call me — it's free.</a>
-        </p>
-      </div>
-    </section>
-  );
-}
+
 
 /* ---------------- FAQ ---------------- */
 function FAQ() {
